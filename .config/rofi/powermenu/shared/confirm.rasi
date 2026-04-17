@@ -1,0 +1,79 @@
+/**
+ * Confirmation Dialog
+ * Matches Tokyo Night glassmorphism power menu style
+ */
+
+@import "colors.rasi"
+
+* {
+    background-color:            transparent;
+    text-color:                  @foreground;
+    font:                        "Hack Nerd Font 13";
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    width:                       320px;
+    padding:                     24px;
+    border:                      2px solid;
+    border-radius:               20px;
+    border-color:                rgba(122, 162, 247, 0.3);
+    background-color:            rgba(26, 27, 38, 0.92);
+    cursor:                      "default";
+}
+
+mainbox {
+    children:                    [ "message", "listview" ];
+    spacing:                     16px;
+    background-color:            transparent;
+}
+
+message {
+    enabled:                     true;
+    padding:                     0px 0px 4px 0px;
+    background-color:            transparent;
+}
+
+textbox {
+    background-color:            transparent;
+    text-color:                  @foreground;
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    markup:                      true;
+}
+
+listview {
+    columns:                     2;
+    lines:                       1;
+    cycle:                       true;
+    scrollbar:                   false;
+    spacing:                     12px;
+    background-color:            transparent;
+    fixed-columns:               true;
+    fixed-height:                true;
+}
+
+element {
+    padding:                     12px 10px;
+    border-radius:               12px;
+    border:                      1px solid;
+    border-color:                rgba(192, 202, 245, 0.12);
+    background-color:            rgba(36, 40, 59, 0.8);
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+/* Yes — Blue accent when selected */
+element selected.normal {
+    background-color:            @selected;
+    border-color:                @selected;
+    text-color:                  #1A1B26;
+}
+
+element-text {
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    background-color:            transparent;
+}

@@ -1,0 +1,26 @@
+image=/home/init0/.config/backgrounds/032.jpg
+clock
+indicator
+indicator-radius=120
+indicator-thickness=10
+ring-color=7aa2f788
+ring-ver-color=9ece6a88
+ring-wrong-color=f7768e88
+ring-clear-color=89ddff88
+key-hl-color=bb9af7
+text-color=c0caf5
+text-wrong-color=f7768e
+text-ver-color=9ece6a
+text-clear-color=89ddff
+line-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+line-clear-color=00000000
+inside-color=00000000
+inside-ver-color=00000000
+inside-wrong-color=00000000
+inside-clear-color=00000000
+separator-color=00000000
+fade-in=0.2
+font=Hack Nerd Font
+font-size=48

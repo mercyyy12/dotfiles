@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Helper to update SDDM's background from user context.
+# Called by dynamic_wallpaper.sh via sudoers (no password needed).
+# Copies into the SDDM theme directory (always accessible to the sddm user).
+set -e
+THEME_DIR="/usr/share/sddm/themes/03-sway-fedora"
+cp "$1" "$THEME_DIR/wallpaper.jpg"
+chmod 644 "$THEME_DIR/wallpaper.jpg"

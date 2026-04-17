@@ -1,0 +1,137 @@
+configuration {
+    modi:                       "drun,run,filebrowser,ssh";
+    show-icons:                 true;
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
+    display-ssh:                "SSH";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+    kb-mode-next:               "Shift+Right,Control+Tab";
+    kb-mode-previous:           "Shift+Left,Control+Shift+Tab";
+}
+
+* {
+    font: "Fira Sans SemiBold 12";
+    background:     #15161EF5;
+    background-alt: #1A1B26F5;
+    foreground:     #C0CAF5FF;
+    selected:       #8aadf4F5;
+    active:         #414868F5;
+    urgent:         #F7768EF5;
+}
+
+* {
+    background-color:            var(background);
+    foreground-color:            var(foreground);
+    alternate-background:        var(background-alt);
+    selected-normal-background:  var(selected);
+    normal-foreground:           var(foreground);
+    alternate-normal-foreground: #15161eff;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    width:                       800px;
+    enabled:                     true;
+    border-radius:               10px;
+    background-color:            var(background-color);
+}
+
+mainbox {
+    enabled:                     true;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "message", "mode-switcher", "listview" ];
+}
+
+inputbar {
+    enabled:                     true;
+    margin:                      0px 0px 10px 0px;
+    padding:                     15px 20px;
+    border-radius:               10px;
+    background-color:            var(alternate-background);
+    text-color:                  var(foreground-color);
+    border:                      0px 0px 2px 0px;
+    border-color:                var(selected-normal-background);
+    children:                    [ "entry" ];
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
+    vertical-align:              0.5;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    layout:                      vertical;
+    border:                      0px;
+    background-color:            transparent;
+    text-color:                  var(foreground-color);
+}
+
+element {
+    enabled:                     true;
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  var(foreground-color);
+    cursor:                      pointer;
+}
+
+element normal.normal, element alternate.normal {
+    background-color:            transparent;
+    text-color:                  var(normal-foreground);
+}
+
+element selected.normal {
+    background-color:            transparent;
+    text-color:                  var(selected);
+    border:                      2px;
+    border-color:                var(selected);
+    border-radius:               10px;
+}
+
+element-icon {
+    background-color:            transparent;
+    size:                        32px;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+}
+
+mode-switcher {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+}
+
+button {
+    padding:                     10px;
+    margin:                      0px 5px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  #565f89ff;
+    cursor:                      pointer;
+    border:                      2px;
+}
+
+button selected {
+    background-color:            transparent;
+    text-color:                  var(selected);
+    border-color:                var(selected);
+    border-radius:               10px;
+}

@@ -1,0 +1,179 @@
+{
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": ""
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+        "rewrite": {
+            "(.*) - Brave": "$1",
+            "(.*) - Chromium": "$1",
+            "(.*) - Brave Search": "$1",
+            "(.*) - Outlook": "$1",
+            "(.*) Microsoft Teams": "$1"
+        },
+        "separate-outputs": true,
+        "format": "<span color=\"#24273a\" style=\"italic\">{}</span>"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "spacing": 5
+    },
+    "clock": {
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#bb9af7'><b>{}</b></span>",
+                "days": "<span color='#7aa2f7'><b>{}</b></span>",
+                "weeks": "<span color='#9ece6a'><b>W{}</b></span>",
+                "weekdays": "<span color='#e0af68'><b>{}</b></span>",
+                "today": "<span background='#2ac3de' color='#1a1b26'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        },
+        "format": "{:%a %d %b | %I:%M %p}",
+        "format-alt": "  {:%Y-%m-%d  %H:%M:%S}",
+        "interval": 60
+    },
+    "custom/system": {
+        "format": "",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 10,
+        "format": " {usage: >3}%",
+        "tooltip": false,
+        "on-click": "kitty -e btop"
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {: >3}%",
+        "tooltip": false,
+        "on-click": "kitty -e btop"
+    },
+    "temperature": {
+        "interval": 10,
+        "thermal-zone": 4,
+        "critical-threshold": 80,
+        "format": "  {temperatureC}°C"
+    },
+    "disk": {
+        "interval": 300,
+        "format": " {percentage_used}% ",
+        "path": "/"
+    },
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/system",
+            "disk",
+            "cpu",
+            "memory"
+        ]
+    },
+    "backlight": {
+        "format": "{icon} {percent: >3}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-scroll-down": "brightnessctl set 5%-",
+        "on-scroll-up": "brightnessctl set +5%"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity: >3}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon}  {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format": "󰤭  Disabled",
+        "format-wifi": "󰤨  {essid}",
+        "format-ethernet": "󰌶  Wired",
+        "format-disconnected": "󰤫  Disconnected",
+        "tooltip-format": "󰌶 {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "󰤨  {essid} ({signalStrength}%)\n󰩟  {ipaddr}/{cidr}",
+        "tooltip-format-ethernet": "󰌶  {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "󰤫  Disconnected",
+        "on-click": "~/.config/rofi/scripts/wifi-menu.sh"
+    },
+    "bluetooth": {
+        "format": "<span size='large'>󰂯</span>",
+        "format-connected": "<span size='large'>󰂱</span> {device_alias}",
+        "format-connected-battery": "<span size='large'>󰂱</span> {device_alias} {device_battery_percentage}%",
+        "format-disabled": "<span size='large'>󰂲</span>",
+        "format-off": "<span size='large'>󰂲</span>",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueman-manager"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume: >3}%",
+        "format-bluetooth": "󰂱 {volume: >3}%",
+        "format-muted": "󰝟  muted",
+        "format-icons": {
+            "headphones": "󰋋",
+            "handsfree": "󱠳",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "~/.config/rofi/powermenu/powermenu.sh",
+        "tooltip": false
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "rofi -show drun -replace",
+        "tooltip": false
+    }
+}

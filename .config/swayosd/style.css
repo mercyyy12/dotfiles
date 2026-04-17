@@ -1,0 +1,33 @@
+/* Tokyo Night Glassmorphism Style */
+window#osd {
+    background: rgba(26, 27, 38, 0.85);
+    border: 2px solid #7aa2f7;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#container {
+    margin: 10px;
+}
+
+image, label {
+    color: #c0caf5;
+    font-family: "Fira Sans", sans-serif;
+}
+
+progressbar {
+    min-height: 12px;
+    border-radius: 999px;
+    background: transparent;
+    margin-top: 10px;
+}
+
+trough {
+    background: rgba(36, 40, 59, 0.8);
+    border-radius: 999px;
+}
+
+progress {
+    background: linear-gradient(to right, #7aa2f7, #7dcfff);
+    border-radius: 999px;
+}

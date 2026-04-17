@@ -1,0 +1,37 @@
+#################################################
+#                   Main Config                 #
+#################################################
+
+[manager]
+sort_by        = "mtime"
+sort_sensitive = false
+sort_reverse   = true
+sort_dir_first = true
+linemode       = "mtime"
+
+#################################################
+#                   Plugins                     #
+#################################################
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
+
+[plugin]
+append_previewers = [
+    { name = "*", run = "file-extra-metadata" },
+]
+
+append_spotters = [
+    { name = "*", run = "file-extra-metadata" },
+]
+
+spotters = [
+    { name = "*", run = "file-extra-metadata" },
+]

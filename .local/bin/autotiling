@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+import i3ipc, subprocess, os, signal, sys
+
+def kill_others():
+    my_pid = os.getpid()
+    try:
+        for pid in subprocess.check_output(["pgrep", "-f", "autotiling"]).decode().split():
+            if int(pid) != my_pid:
+                os.kill(int(pid), signal.SIGTERM)
+    except Exception: pass
+
+def on_window(i3, e):
+    try:
+        focused = i3.get_tree().find_focused()
+        if not focused or focused.type != "con": return
+        if focused.floating and focused.floating != "auto_off": return
+        if focused.parent and focused.parent.layout in ["tabbed", "stacking"]: return
+        new_layout = "split h" if focused.rect.width > focused.rect.height else "split v"
+        if focused.parent and focused.parent.layout != ("splith" if new_layout == "split h" else "splitv"):
+            i3.command(new_layout)
+    except Exception: pass
+
+def main():
+    kill_others()
+    try:
+        i3 = i3ipc.Connection()
+        i3.on("window::new", on_window)
+        i3.on("window::focus", on_window)
+        i3.main()
+    except Exception: sys.exit(1)
+
+if __name__ == "__main__": main()

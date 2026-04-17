@@ -1,0 +1,123 @@
+@define-color base00 #24273a;
+@define-color base01 #1e2030;
+@define-color base02 #363a4f;
+@define-color base03 #494d64;
+@define-color base04 #5b6078;
+@define-color text   #cad3f5;
+@define-color subtext #a5adcb;
+@define-color accent #b7bdf8;
+@define-color blue   #8aadf4;
+@define-color red    #ed8796;
+@define-color green  #a6da95;
+@define-color yellow #eed49f;
+@define-color magenta #c6a0f6;
+
+* {
+    font-family: "Hack Nerd Font";
+    font-size: 14px;
+    transition: 300ms;
+    color: @subtext;
+}
+
+/* Notifications */
+.notification-row {
+    outline: none;
+    margin: 4px 8px;
+    padding: 0;
+}
+
+.notification {
+    /* Increased opacity to 0.98 for better legibility against busy backgrounds */
+    background: rgba(30, 32, 48, 0.98); 
+    border: none;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+}
+
+.notification:hover {
+    background: #24273a; /* Completely solid on hover */
+    border-color: @blue;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+.notification-content {
+    background: transparent;
+    padding: 4px;
+}
+
+.notification-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: @blue;
+}
+
+.notification-body {
+    color: @subtext;
+    margin-top: 4px;
+}
+
+.notification-time {
+    color: @base04;
+}
+
+/* Icon in Notification */
+.notification-icon {
+    border-radius: 8px;
+    margin-right: 12px;
+}
+
+/* Control Center */
+.control-center {
+    background: rgba(26, 27, 38, 0.98);
+    border-left: 1px solid rgba(138, 173, 244, 0.3);
+    color: @subtext;
+    padding: 24px;
+    border-radius: 20px 0 0 20px;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.widget-title {
+    color: @blue;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 10px 20px 10px;
+}
+
+.widget-title > button {
+    background: rgba(54, 58, 79, 0.8);
+    color: @accent;
+    border-radius: 12px;
+    padding: 6px 12px;
+    border: 1px solid rgba(138, 173, 244, 0.2);
+}
+
+.widget-title > button:hover {
+    background: @blue;
+    color: @base00;
+}
+
+.widget-dnd {
+    background: rgba(54, 58, 79, 0.7);
+    border-radius: 16px;
+    margin: 10px;
+    padding: 12px;
+    border: 1px solid rgba(138, 173, 244, 0.2);
+}
+
+/* Close button */
+.close-button {
+    background: rgba(237, 135, 150, 0.15);
+    color: @red;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-right: 2px;
+}
+
+.close-button:hover {
+    background: @red;
+    color: @base00;
+}

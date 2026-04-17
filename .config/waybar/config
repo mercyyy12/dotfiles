@@ -1,0 +1,29 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin": "0 0 0 0",
+    "modules-left": [
+        "custom/launcher",
+        "sway/workspaces",
+        "tray",
+        "sway/window",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "backlight",
+        "bluetooth",
+        "pulseaudio",
+        "temperature",
+        "group/hardware",
+        "battery",
+        "network",
+        "idle_inhibitor",
+        "custom/power"
+    ],
+    "include": [
+        "~/.config/waybar/modules.json"
+    ]
+}

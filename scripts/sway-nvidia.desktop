@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Sway (NVIDIA)
+Comment=SirCmpwn's Wayland window manager (NVIDIA Patch)
+Exec=/usr/local/bin/sway-nvidia
+Type=Application
+DesktopNames=sway
+Keywords=tiling;wm;windowmanager;window;manager;wayland;

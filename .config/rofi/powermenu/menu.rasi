@@ -1,0 +1,103 @@
+/**
+ * Power Menu - Final Goal State
+ * 3x2 Grid | Borderless | Transparent | Vivid White
+ */
+
+configuration {
+    show-icons:                 false;
+    hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+}
+
+@import "shared/colors.rasi"
+
+/*****----- Global Properties -----*****/
+* {
+    background-color:            transparent;
+    text-color:                  #FFFFFF;
+    font:                        "Hack Nerd Font 52";
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       1300px;
+    height:                      700px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* Visual Styles */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               0px;
+    border-color:                transparent;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     50px;
+    background-color:            transparent;
+    children:                    [ "listview" ];
+}
+
+/*****----- 3x2 Grid -----*****/
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       2;
+    cycle:                       true;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    flow:                        horizontal;
+    reverse:                     false;
+    fixed-columns:               true;
+    fixed-height:                true;
+    
+    spacing:                     40px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Card Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     40px 10px; 
+    border:                      3px;
+    border-radius:               24px;
+    border-color:                rgba(255, 255, 255, 0.5);
+    background-color:            rgba(255, 255, 255, 0.35);
+    text-color:                  #FFFFFF;
+    cursor:                      pointer;
+    orientation:                 vertical;
+    children:                    [ "element-text" ];
+}
+
+element selected.normal {
+    background-color:            rgba(255, 255, 255, 0.3);
+    border-color:                rgba(255, 255, 255, 1.0);
+    text-color:                  #FFFFFF;
+}
+
+/*****----- Text Styling -----*****/
+element-text {
+    background-color:            transparent;
+    text-color:                  #FFFFFF;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    markup:                      true;
+    enabled:                     true;
+}

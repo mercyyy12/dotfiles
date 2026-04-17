@@ -1,0 +1,2 @@
+output * bg /home/init0/.config/backgrounds/002.jpg fill
+include "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf"
