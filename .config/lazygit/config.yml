@@ -1,17 +1,14 @@
 gui:
   nerdFontsVersion: "3"
-  branchColors:
-    'main': red
-    'master': red
   theme:
     activeBorderColor:
-      - "#ff9e64"
-      - "bold"
+      - "#7aa2f7"
+      - bold
     inactiveBorderColor:
       - "#27a1b9"
     searchingActiveBorderColor:
       - "#ff9e64"
-      - "bold"
+      - bold
     optionsTextColor:
       - "#7aa2f7"
     selectedLineBgColor:
@@ -25,6 +22,6 @@ gui:
     markedBaseCommitBgColor:
       - "#e0af68"
     unstagedChangesColor:
-      - "#db4b4b"
+      - "#f7768e"
     defaultFgColor:
       - "#c0caf5"
