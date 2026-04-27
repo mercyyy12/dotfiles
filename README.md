@@ -1,69 +1,87 @@
-# 🌌 Vivid Glass: The Premium Sway Experience
+# Tokyo Night Desktop Environment
+A high-performance, core-optimized Sway environment for power users.
 
-Welcome to **Vivid Glass**, a state-of-the-art, pixel-perfect tiling environment built from the ground up for **Fedora 43+**. 
-
-This environment is designed for power users who want a beautiful, "Vivid Glass" aesthetic combined with the high-performance dynamic tiling of Sway. It features a custom Tokyo Night color scheme, a translucent Waybar, and a highly polished Rofi launcher.
+This repository contains a curated, aesthetic-first configuration for Fedora, featuring a seamless Tokyo Night color scheme, hardware-accelerated terminal workflows, and unified system-wide styling.
 
 ---
 
-## 🚀 Complete Beginner Installation (Step-by-Step)
+## ⚡ Quick Start (Clean Install)
 
-Follow these exact steps to transform your fresh Fedora system into the Vivid Glass environment.
-
-### 1. Prepare and Clone
-Open your terminal and run these commands to download the configuration files:
+### 1. Acquire the Repository
 ```bash
 sudo dnf install git -y
 git clone https://github.com/your-username/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-### 2. Run the Installation Wizard
-This will install all core applications (Sway, Waybar, Rofi), dependencies (Python, Polkit), and the Kitty terminal.
+### 2. Execute Installation
 ```bash
-chmod +x install.sh
+chmod +x install.sh setup_links.sh scripts/*.sh
 ./install.sh
-```
-
-### 3. Deploy Configurations
-Now, link the files into your system configuration folders:
-```bash
-chmod +x setup_links.sh
 ./setup_links.sh
 ```
 
-### 4. Install Fonts & Icons
-Run this to ensure all your status bar icons and menu symbols render correctly:
+### 3. Finalize Assets
 ```bash
-chmod +x scripts/install_fonts.sh
 ./scripts/install_fonts.sh
+./scripts/install_cursors.sh
+./scripts/install_icons.sh
+sudo ./scripts/setup-sddm-theme.sh
 ```
 
-### 5. Finalize & Log In
-1.  **NVIDIA Users**: If you have an NVIDIA GPU, run `./scripts/fix-sway-nvidia.sh`.
-2.  **Reboot**: Restart your computer.
-3.  **Select Sway**: At the login screen, click the **Gear Icon** (usually bottom right) and select **Sway** before entering your password.
+---
+
+## 🛠️ Core Stack
+*   **Window Manager**: [Sway](https://swaywm.org/) (Wayland Native Tiling)
+*   **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/) (GPU Accelerated)
+*   **Bar**: [Waybar](https://github.com/Alexays/Waybar) (Translucent Tokyo Night)
+*   **Shell**: [ZSH](https://www.zsh.org/) + Powerlevel10k
+*   **File Management**: [Thunar](https://docs.xfce.org/xfce/thunar/start) (GUI) & [Yazi](https://yazi-rs.github.io/) (Terminal)
+*   **Navigation**: [Rofi-Wayland](https://github.com/lbonn/rofi-wayland)
+*   **OSD**: [SwayOSD](https://github.com/ErikReider/SwayOSD) (Hardware Indicators)
 
 ---
 
-## ⌨️ How to Use (Essential Shortcuts)
-For a full list of commands, see the [KEYBINDINGS.md](KEYBINDINGS.md) file.
-- **`Super + Enter`**: Open Kitty Terminal
-- **`Super + d`**: Open App Launcher (Rofi)
-- **`Super + b`**: Open Web Browser (Brave)
-- **`Super + p`**: Open Power/Session Menu
-- **`Super + Shift + q`**: Close focused window
+## ⌨️ Essential Keybindings
+Full documentation available in [KEYBINDINGS.md](KEYBINDINGS.md).
+
+- **`Super + Return`**: Terminal
+- **`Super + d`**: Application Launcher
+- **`Super + n`**: File Manager
+- **`Super + p`**: Power Menu
+- **`Super + Shift + w`**: Cycle Wallpaper
 - **`Super + f`**: Toggle Fullscreen
+- **`Super + Shift + q`**: Close Window
 
 ---
 
-## 🛠️ Included Master Tools
-*   **Terminal**: [Kitty](https://kitty.org/) (High-performance, GPU-accelerated)
-*   **File Manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start) (GUI) and [Yazi](https://yazi-rs.github.io/) (Terminal)
-*   **Launcher**: [Rofi-Wayland](https://github.com/lbonn/rofi-wayland)
-*   **Bar**: [Waybar](https://github.com/Alexays/Waybar)
-*   **OSD**: [SwayOSD](https://github.com/ErikReider/SwayOSD) (Visual volume/brightness indicators)
-*   **Shell**: [ZSH](https://www.zsh.org/) with Powerlevel10k
+## 🖥️ NVIDIA & Hybrid Graphics
+This environment is optimized for NVIDIA/Hybrid hardware (Intel + NVIDIA).
+
+### Option 1: Performance Mode (Always NVIDIA)
+Use this if you are always plugged in or using an external monitor.
+```bash
+./scripts/fix-sway-nvidia.sh
+```
+*Select **Sway (NVIDIA)** at login.*
+
+### Option 2: Hybrid Mode (Intel + NVIDIA Offload)
+Recommended for laptops. Uses Intel for the desktop and NVIDIA only for specific apps.
+```bash
+./scripts/setup-hybrid-graphics.sh
+```
+*Select **Sway (Hybrid)** at login.*
+
+**To run an app on NVIDIA in Hybrid Mode:**
+```bash
+nvrun <app-name>
+```
 
 ---
-*Built with focus and precision for the Fedora ecosystem.*
+
+## 🎨 Wallpapers & Aesthetics
+This repository uses high-quality compressed JPG previews for GitHub compatibility. 
+**For the ultra-high-res 4K/8K PNG versions, feel free to open an issue or reach out!**
+
+---
+*Created and maintained with a "maximize-to-core" philosophy.*

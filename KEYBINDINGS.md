@@ -25,6 +25,7 @@ The main modifier key (Mod4) is the Super/Windows key.
 * Super + Shift + f : Open File Finder
 * Super + Shift + v : Open Clipboard History
 * Super + Shift + t : Toggle Night Light
+* Super + Shift + w : Change Wallpaper (Random)
 
 ### Screenshots
 * Print Screen : Take a full screenshot
@@ -100,3 +101,6 @@ These commands manage the Kitty terminal emulator directly.
 * Ctrl + Shift + w : Close the current Kitty window or pane
 * Ctrl + Shift + ] : Switch to next Kitty pane
 * Ctrl + Shift + [ : Switch to previous Kitty pane
+
+## Hybrid Graphics
+* nvrun <app> : Run the specified application using the NVIDIA Discrete GPU
