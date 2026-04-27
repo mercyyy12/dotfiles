@@ -1,0 +1,54 @@
+# Tokyo Night btop theme
+# Based on the Tokyo Night color palette
+
+# Main background, empty for terminal default, build-in themes can have transparency if set to 0
+theme[main_bg]="#1a1b26"
+
+# Main text color
+theme[main_fg]="#c0caf5"
+
+# Title color for boxes
+theme[title]="#7aa2f7"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#bb9af7"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#283457"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#7aa2f7"
+
+# Color of inactive maximize button
+theme[inactive_fg]="#414868"
+
+# Color of graph points
+theme[graph_text]="#7dcfff"
+
+# Misc colors for lines and boxes
+theme[div_line]="#414868"
+
+# Temperature graph colors
+theme[temp_start]="#7aa2f7"
+theme[temp_mid]="#e0af68"
+theme[temp_end]="#f7768e"
+
+# CPU graph colors
+theme[cpu_start]="#7aa2f7"
+theme[cpu_mid]="#bb9af7"
+theme[cpu_end]="#f7768e"
+
+# Mem graph colors
+theme[mem_start]="#9ece6a"
+theme[mem_mid]="#e0af68"
+theme[mem_end]="#f7768e"
+
+# Net graph colors
+theme[net_start]="#9ece6a"
+theme[net_mid]="#7dcfff"
+theme[net_end]="#bb9af7"
+
+# Processes box color
+theme[proc_start]="#7aa2f7"
+theme[proc_mid]="#7dcfff"
+theme[proc_end]="#bb9af7"
