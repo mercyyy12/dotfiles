@@ -1,5 +1,7 @@
 # Tokyo Night Desktop Environment
 An optimized Sway environment, based on the work by **[CodeOps HQ](https://github.com/CodeOpsHQ/dotfiles)**.
+![Desktop Preview](preview.png)
+
 
 This repository contains a curated, aesthetic-first configuration for Fedora, featuring a seamless Tokyo Night color scheme, hardware-accelerated terminal workflows, and unified system-wide styling.
 
