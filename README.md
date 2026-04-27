@@ -1,5 +1,5 @@
 # Tokyo Night Desktop Environment
-A high-performance, core-optimized Sway environment for power users.
+An optimized Sway environment.
 
 This repository contains a curated, aesthetic-first configuration for Fedora, featuring a seamless Tokyo Night color scheme, hardware-accelerated terminal workflows, and unified system-wide styling.
 
@@ -10,7 +10,7 @@ This repository contains a curated, aesthetic-first configuration for Fedora, fe
 ### 1. Acquire the Repository
 ```bash
 sudo dnf install git -y
-git clone https://github.com/your-username/dotfiles.git ~/dotfiles
+git clone https://github.com/mercyyy12/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
@@ -83,5 +83,3 @@ nvrun <app-name>
 This repository uses high-quality compressed JPG previews for GitHub compatibility. 
 **For the ultra-high-res 4K/8K PNG versions, feel free to open an issue or reach out!**
 
----
-*Created and maintained with a "maximize-to-core" philosophy.*
