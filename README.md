@@ -5,7 +5,7 @@ This repository contains a curated, aesthetic-first configuration for Fedora, fe
 
 ---
 
-## ⚡ Quick Start (Clean Install)
+## Quick Start (Clean Install)
 
 ### 1. Acquire the Repository
 ```bash
@@ -31,7 +31,7 @@ sudo ./scripts/setup-sddm-theme.sh
 
 ---
 
-## 🛠️ Core Stack
+## Core Stack
 *   **Window Manager**: [Sway](https://swaywm.org/) (Wayland Native Tiling)
 *   **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/) (GPU Accelerated)
 *   **Bar**: [Waybar](https://github.com/Alexays/Waybar) (Translucent Tokyo Night)
@@ -42,7 +42,7 @@ sudo ./scripts/setup-sddm-theme.sh
 
 ---
 
-## ⌨️ Essential Keybindings
+## Essential Keybindings
 Full documentation available in [KEYBINDINGS.md](KEYBINDINGS.md).
 
 - **`Super + Return`**: Terminal
@@ -55,7 +55,7 @@ Full documentation available in [KEYBINDINGS.md](KEYBINDINGS.md).
 
 ---
 
-## 🖥️ NVIDIA & Hybrid Graphics
+## NVIDIA & Hybrid Graphics
 This environment is optimized for NVIDIA/Hybrid hardware (Intel + NVIDIA).
 
 ### Option 1: Performance Mode (Always NVIDIA)
@@ -79,7 +79,7 @@ nvrun <app-name>
 
 ---
 
-## 🎨 Wallpapers & Aesthetics
+## Wallpapers & Aesthetics
 This repository uses high-quality compressed JPG previews for GitHub compatibility. 
 **For the ultra-high-res 4K/8K PNG versions, feel free to open an issue or reach out!**
 
