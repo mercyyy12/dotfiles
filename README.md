@@ -1,5 +1,5 @@
 # Tokyo Night Desktop Environment
-An optimized Sway environment.
+An optimized Sway environment, based on the work by **[CodeOps HQ](https://github.com/CodeOpsHQ/dotfiles)**.
 
 This repository contains a curated, aesthetic-first configuration for Fedora, featuring a seamless Tokyo Night color scheme, hardware-accelerated terminal workflows, and unified system-wide styling.
 
@@ -82,9 +82,3 @@ nvrun <app-name>
 ## Wallpapers & Aesthetics
 This repository uses high-quality compressed JPG previews for GitHub compatibility. 
 **For the ultra-high-res 4K/8K PNG versions, feel free to open an issue or reach out!**
-
----
-
-## Credits
-This configuration is based on the excellent work by **[CodeOps HQ](https://github.com/CodeOpsHQ/dotfiles)**. 
-Modified and customized to fit my specific hardware and aesthetic preferences.
