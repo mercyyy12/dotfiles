@@ -1,24 +1,34 @@
 #!/usr/bin/env bash
+# Script to install premium cursor themes.
 
-# Bibata Modern Ice Cursor Installation
-echo "Installing Bibata Modern Ice Cursors..."
-
+set -e
 mkdir -p ~/.icons
-
-# Download URL for Bibata Modern Ice
-URL="https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Modern-Ice.tar.gz"
-
-# Temporary directory
 TEMP_DIR=$(mktemp -d)
 
-# Download and extract
-curl -L "$URL" -o "$TEMP_DIR/bibata.tar.gz"
-tar -xzf "$TEMP_DIR/bibata.tar.gz" -C "$TEMP_DIR"
+install_bibata() {
+    echo "Installing Bibata Modern Ice Cursors..."
+    URL="https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/Bibata-Modern-Ice.tar.gz"
+    curl -L "$URL" -o "$TEMP_DIR/bibata.tar.gz"
+    tar -xzf "$TEMP_DIR/bibata.tar.gz" -C "$TEMP_DIR"
+    cp -r "$TEMP_DIR/Bibata-Modern-Ice" ~/.icons/
+}
 
-# Install to ~/.icons
-cp -r "$TEMP_DIR/Bibata-Modern-Ice" ~/.icons/
+install_catppuccin() {
+    echo "Installing Catppuccin Mocha Dark Cursors..."
+    URL="https://github.com/catppuccin/cursors/releases/latest/download/Catppuccin-Mocha-Dark-Cursors.zip"
+    curl -L "$URL" -o "$TEMP_DIR/cursors.zip"
+    unzip -q "$TEMP_DIR/cursors.zip" -d "$TEMP_DIR"
+    cp -r "$TEMP_DIR/catppuccin-mocha-dark-cursors" ~/.icons/Catppuccin-Mocha-Dark-Cursors
+}
 
-# Cleanup
+case $1 in
+    bibata) install_bibata ;;
+    catppuccin) install_catppuccin ;;
+    *) 
+        install_bibata
+        install_catppuccin
+        ;;
+esac
+
 rm -rf "$TEMP_DIR"
-
-echo "Success! Bibata Modern Ice installed to ~/.icons/"
+echo "Success! Cursors installed to ~/.icons/"

@@ -1,5 +1,11 @@
 #!/usr/bin/env sh
-swayidle -w timeout 5 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' &
-IDLE_PID=$!
-hyprlock
-kill $IDLE_PID 2>/dev/null
+
+# Prevent multiple instances
+pgrep -x hyprlock && exit 0
+
+# Run hyprlock in the background so it doesn't block swayidle
+hyprlock &
+# Give it a moment to render before allowing the system to sleep
+sleep 0.5
+
+
