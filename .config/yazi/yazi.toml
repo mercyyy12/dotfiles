@@ -1,17 +1,9 @@
-#################################################
-#                   Main Config                 #
-#################################################
-
 [manager]
 sort_by        = "mtime"
 sort_sensitive = false
 sort_reverse   = true
 sort_dir_first = true
 linemode       = "mtime"
-
-#################################################
-#                   Plugins                     #
-#################################################
 
 [[plugin.prepend_fetchers]]
 id   = "git"
@@ -34,4 +26,24 @@ append_spotters = [
 
 spotters = [
     { name = "*", run = "file-extra-metadata" },
+]
+
+[preview]
+max_width = 1000
+max_height = 1000
+image_filter = "lanczos3"
+image_quality = 90
+image_delay = 30
+ueberzug_scale = 1
+ueberzug_offset = [0, 0, 0, 0]
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true, desc = "Edit with Neovim" },
+]
+play = [
+	{ run = 'mpv "$@"', orphan = true, desc = "Play with MPV" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open with System Default" },
 ]

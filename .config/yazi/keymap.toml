@@ -6,3 +6,15 @@ run = "plugin mount"
 on  = ["'", "s"]
 run = "plugin what-size"
 desc = "Show file size"
+
+# Smart Trash
+[[mgr.prepend_keymap]]
+on   = [ "d", "d" ]
+run  = "shell 'trash-put \"$@\"' --confirm"
+desc = "Move file to trash"
+
+# Zoxide Jump
+[[mgr.prepend_keymap]]
+on  = "z"
+run = "plugin zoxide"
+desc = "Jump to a directory using zoxide"
