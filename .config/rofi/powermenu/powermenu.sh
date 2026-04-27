@@ -11,7 +11,7 @@ shutdown="<span font_desc='Hack Nerd Font 44' rise='-2000'></span>\n<span fon
 yes="  Yes"
 no="  No"
 confirm_cmd() {
-	echo -e "$yes\n$no" | rofi -dmenu -p 'Confirmation' -theme "$dir/shared/confirm.rasi"
+	echo -e "$yes\n$no" | rofi -dmenu -p 'Confirmation' -theme "$dir/confirm.rasi"
 }
 run_rofi() {
 	echo -e "${lock}|${exit}|${suspend}|${hibernate}|${reboot}|${shutdown}" | rofi -dmenu -no-config -p "Up: $uptime_str" -sep '|' -eh 2 -markup-rows -theme "$dir/$theme.rasi"

@@ -7,19 +7,9 @@ configuration {
     display-ssh:                "SSH";
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
-    kb-mode-next:               "Shift+Right,Control+Tab";
-    kb-mode-previous:           "Shift+Left,Control+Shift+Tab";
 }
 
-* {
-    font: "Fira Sans SemiBold 12";
-    background:     #15161EF5;
-    background-alt: #1A1B26F5;
-    foreground:     #C0CAF5FF;
-    selected:       #8aadf4F5;
-    active:         #414868F5;
-    urgent:         #F7768EF5;
-}
+@import "~/.config/rofi/theme.rasi"
 
 * {
     background-color:            var(background);
@@ -27,7 +17,6 @@ configuration {
     alternate-background:        var(background-alt);
     selected-normal-background:  var(selected);
     normal-foreground:           var(foreground);
-    alternate-normal-foreground: #15161eff;
 }
 
 window {
@@ -35,20 +24,17 @@ window {
     location:                    center;
     anchor:                      center;
     width:                       800px;
-    enabled:                     true;
     border-radius:               10px;
     background-color:            var(background-color);
 }
 
 mainbox {
-    enabled:                     true;
     padding:                     20px;
     background-color:            transparent;
     children:                    [ "inputbar", "message", "mode-switcher", "listview" ];
 }
 
 inputbar {
-    enabled:                     true;
     margin:                      0px 0px 10px 0px;
     padding:                     15px 20px;
     border-radius:               10px;
@@ -60,7 +46,6 @@ inputbar {
 }
 
 entry {
-    enabled:                     true;
     background-color:            transparent;
     text-color:                  inherit;
     placeholder:                 "Search...";
@@ -69,7 +54,6 @@ entry {
 }
 
 listview {
-    enabled:                     true;
     columns:                     2;
     lines:                       8;
     cycle:                       true;
@@ -81,7 +65,6 @@ listview {
 }
 
 element {
-    enabled:                     true;
     padding:                     10px;
     border-radius:               10px;
     background-color:            transparent;
@@ -114,7 +97,6 @@ element-text {
 }
 
 mode-switcher {
-    enabled:                     true;
     spacing:                     0px;
     background-color:            transparent;
 }

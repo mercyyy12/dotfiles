@@ -1,0 +1,9 @@
+/**
+ * Global Rofi Theme - Single Source of Truth
+ **/
+
+@import "colors/tokyonight.rasi"
+
+* {
+    font: "Hack Nerd Font 12";
+}

@@ -3,12 +3,11 @@
  * Matches Tokyo Night glassmorphism power menu style
  */
 
-@import "colors.rasi"
+@import "~/.config/rofi/theme.rasi"
 
 * {
     background-color:            transparent;
     text-color:                  @foreground;
-    font:                        "Hack Nerd Font 13";
 }
 
 window {
@@ -65,7 +64,6 @@ element {
     cursor:                      pointer;
 }
 
-/* Yes — Blue accent when selected */
 element selected.normal {
     background-color:            @selected;
     border-color:                @selected;
