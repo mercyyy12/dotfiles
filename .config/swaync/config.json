@@ -25,7 +25,7 @@
   "script-fail-notify": true,
   "widgets": [
     "title",
-    "mql",
+    "mpris",
     "dnd",
     "notifications"
   ],
@@ -38,12 +38,9 @@
     "dnd": {
       "text": "Do Not Disturb"
     },
-    "label": {
-      "max-lines": 5,
-      "text": "Label Text"
-    },
-    "mql": {
-      "text": "Media Player"
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 12
     }
   }
 }

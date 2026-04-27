@@ -21,7 +21,6 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit ice wait'0' lucid atload'source ~/.config/zsh/zsh-syntax-highlighting-tokyonight.zsh'; zinit light zsh-users/zsh-syntax-highlighting
 zinit ice wait'0' lucid; zinit light zsh-users/zsh-completions
 zinit ice wait'0' lucid; zinit light zsh-users/zsh-autosuggestions
-zinit ice wait'0' lucid; zinit light Aloxaf/fzf-tab
 zinit ice wait'0' lucid; zinit light jeffreytse/zsh-vi-mode
 
 zinit ice wait'0' lucid; zinit snippet OMZP::git
@@ -185,22 +184,17 @@ function mkdirg() {
 	mkdir -p "$@" && cd "$@"
 }
 
-function random_bars() {
-	columns=$(tput cols)
-	chars=(▁ ▂ ▃ ▄ ▅ ▆ ▇ █)
-	for ((i = 1; i <= $columns; i++)); do
-		echo -n "${chars[RANDOM%${#chars} + 1]}"
-	done
-	echo
-}
-
 #######################################################
 # Integrations (Deferred for Speed)
 #######################################################
 zinit ice wait'0' lucid atinit'source <(fzf --zsh)'; zinit light Aloxaf/fzf-tab
 zinit ice wait'0' lucid atinit'eval "$(zoxide init --cmd cd zsh)"'; zinit light zdharma-continuum/null
 
+# Trash Integration
+alias rm='trash-put'
+alias tl='trash-list'
+alias tr='trash-restore'
+alias te='trash-empty'
 
-
-# Terminal Greeting
-# fastfetch (Manually run if needed to avoid P10k instant prompt warnings)
+# Hybrid Graphics Alias
+alias nvrun='/usr/local/bin/nvrun'

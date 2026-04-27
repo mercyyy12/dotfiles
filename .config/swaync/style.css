@@ -1,120 +1,111 @@
-@define-color base00 #24273a;
-@define-color base01 #1e2030;
-@define-color base02 #363a4f;
-@define-color base03 #494d64;
-@define-color base04 #5b6078;
-@define-color text   #cad3f5;
-@define-color subtext #a5adcb;
-@define-color accent #b7bdf8;
-@define-color blue   #8aadf4;
-@define-color red    #ed8796;
-@define-color green  #a6da95;
-@define-color yellow #eed49f;
-@define-color magenta #c6a0f6;
+@define-color base00 #1a1b26;
+@define-color base01 #16161e;
+@define-color base02 #24283b;
+@define-color base03 #414868;
+@define-color base04 #565f89;
+@define-color text   #c0caf5;
+@define-color subtext #a9b1d6;
+@define-color accent #bb9af7;
+@define-color blue   #7aa2f7;
+@define-color red    #f7768e;
+@define-color green  #9ece6a;
+@define-color yellow #e0af68;
+@define-color magenta #bb9af7;
+@define-color sky    #7dcfff;
 
 * {
-    font-family: "Hack Nerd Font";
+    font-family: "Hack Nerd Font", "Fira Sans Semibold";
     font-size: 14px;
     transition: 300ms;
-    color: @subtext;
 }
 
 /* Notifications */
 .notification-row {
     outline: none;
-    margin: 4px 8px;
+    margin: 10px 10px;
     padding: 0;
 }
 
 .notification {
-    /* Increased opacity to 0.98 for better legibility against busy backgrounds */
-    background: rgba(30, 32, 48, 0.98); 
-    border: none;
-    border-radius: 16px;
+    background: rgba(26, 27, 38, 0.95);
+    border: 1px solid rgba(187, 154, 247, 0.3);
+    border-radius: 12px;
     padding: 16px;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .notification:hover {
-    background: #24273a; /* Completely solid on hover */
-    border-color: @blue;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    background: rgba(36, 40, 59, 0.98);
+    border-color: @accent;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
 }
 
 .notification-content {
     background: transparent;
-    padding: 4px;
 }
 
 .notification-title {
     font-weight: bold;
-    font-size: 16px;
-    color: @blue;
+    font-size: 17px;
+    color: @accent;
 }
 
 .notification-body {
-    color: @subtext;
-    margin-top: 4px;
+    color: @text;
+    margin-top: 6px;
+    font-size: 14px;
 }
 
 .notification-time {
     color: @base04;
+    font-size: 12px;
 }
 
 /* Icon in Notification */
 .notification-icon {
-    border-radius: 8px;
-    margin-right: 12px;
+    border-radius: 10px;
+    margin-right: 15px;
 }
 
 /* Control Center */
 .control-center {
     background: rgba(26, 27, 38, 0.98);
-    border-left: 1px solid rgba(138, 173, 244, 0.3);
-    color: @subtext;
-    padding: 24px;
-    border-radius: 20px 0 0 20px;
-}
-
-.control-center-list {
-    background: transparent;
+    border-left: 2px solid @accent;
+    color: @text;
+    padding: 20px;
 }
 
 .widget-title {
-    color: @blue;
-    font-size: 22px;
+    color: @accent;
+    font-size: 24px;
     font-weight: bold;
-    margin: 10px 10px 20px 10px;
 }
 
 .widget-title > button {
-    background: rgba(54, 58, 79, 0.8);
-    color: @accent;
-    border-radius: 12px;
-    padding: 6px 12px;
-    border: 1px solid rgba(138, 173, 244, 0.2);
+    background: rgba(65, 72, 104, 0.5);
+    color: @text;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(187, 154, 247, 0.2);
 }
 
 .widget-title > button:hover {
-    background: @blue;
+    background: @accent;
     color: @base00;
 }
 
 .widget-dnd {
-    background: rgba(54, 58, 79, 0.7);
-    border-radius: 16px;
-    margin: 10px;
-    padding: 12px;
-    border: 1px solid rgba(138, 173, 244, 0.2);
+    background: rgba(65, 72, 104, 0.3);
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid rgba(187, 154, 247, 0.1);
 }
 
 /* Close button */
 .close-button {
-    background: rgba(237, 135, 150, 0.15);
+    background: rgba(247, 118, 142, 0.1);
     color: @red;
     border-radius: 50%;
-    margin-top: 6px;
-    margin-right: 2px;
 }
 
 .close-button:hover {
