@@ -83,12 +83,8 @@ nvrun <app-name>
 This repository uses high-quality compressed JPG previews for GitHub compatibility. 
 **For the ultra-high-res 4K/8K PNG versions, feel free to open an issue or reach out!**
 
-
 ---
 
 ## Credits
 This configuration is based on the excellent work by **[CodeOps HQ](https://github.com/CodeOpsHQ/dotfiles)**. 
 Modified and customized to fit my specific hardware and aesthetic preferences.
-
----
-*Maintained with a "maximize-to-core" philosophy.*
