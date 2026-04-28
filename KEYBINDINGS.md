@@ -13,6 +13,7 @@ The main modifier key (Mod4) is the Super/Windows key.
 * Super + Shift + q : Close focused window
 * Super + f1 : Lock Screen
 * Super + Shift + c : Reload Sway Configuration
+* Super + h : Open searchable Cheat Sheet
 * Super + Shift + e : Exit Sway
 
 ### Applications & Utilities
