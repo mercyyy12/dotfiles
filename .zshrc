@@ -198,3 +198,4 @@ alias te='trash-empty'
 
 # Hybrid Graphics Alias
 alias nvrun='/usr/local/bin/nvrun'
+eval "$(zoxide init zsh)"

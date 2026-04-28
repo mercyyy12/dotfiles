@@ -39,8 +39,11 @@ sudo ./scripts/setup-sddm-theme.sh
 *   **Bar**: [Waybar](https://github.com/Alexays/Waybar) (Translucent Tokyo Night)
 *   **Shell**: [ZSH](https://www.zsh.org/) + Powerlevel10k
 *   **File Management**: [Thunar](https://docs.xfce.org/xfce/thunar/start) (GUI) & [Yazi](https://yazi-rs.github.io/) (Terminal)
-*   **Navigation**: [Rofi-Wayland](https://github.com/lbonn/rofi-wayland)
+*   **Navigation**: [Rofi-Wayland](https://github.com/lbonn/rofi-wayland) & [Zoxide](https://github.com/ajeetdsouza/zoxide) (Smart 'z' jump)
 *   **OSD**: [SwayOSD](https://github.com/ErikReider/SwayOSD) (Hardware Indicators)
+*   **Notifications**: [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) 
+*   **System Monitor**: [Btop++](https://github.com/aristocratos/btop) (Tokyo Night Theme)
+*   **Git Interface**: [LazyGit](https://github.com/jesseduffield/lazygit) (Tokyo Night Theme)
 
 ---
 

@@ -14,101 +14,53 @@
 @define-color sky    #7dcfff;
 
 * {
-    font-family: "Hack Nerd Font", "Fira Sans Semibold";
-    font-size: 14px;
-    transition: 300ms;
+    font-family: "JetBrainsMono Nerd Font", "Fira Sans Semibold";
+    font-size: 13px;
+    transition: 200ms;
 }
 
 /* Notifications */
 .notification-row {
     outline: none;
-    margin: 10px 10px;
+    margin: 8px 10px;
     padding: 0;
 }
 
 .notification {
-    background: rgba(26, 27, 38, 0.95);
-    border: 1px solid rgba(187, 154, 247, 0.3);
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(26, 27, 38, 0.9);
+    border: 1px solid rgba(122, 162, 247, 0.4);
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 0 15px rgba(122, 162, 247, 0.2);
 }
 
 .notification:hover {
-    background: rgba(36, 40, 59, 0.98);
-    border-color: @accent;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
-}
-
-.notification-content {
-    background: transparent;
+    background: rgba(36, 40, 59, 0.95);
+    border-color: @blue;
+    box-shadow: 0 0 20px rgba(122, 162, 247, 0.4);
 }
 
 .notification-title {
     font-weight: bold;
-    font-size: 17px;
-    color: @accent;
+    font-size: 15px;
+    color: @blue;
 }
 
 .notification-body {
     color: @text;
-    margin-top: 6px;
-    font-size: 14px;
-}
-
-.notification-time {
-    color: @base04;
-    font-size: 12px;
-}
-
-/* Icon in Notification */
-.notification-icon {
-    border-radius: 10px;
-    margin-right: 15px;
+    margin-top: 4px;
 }
 
 /* Control Center */
 .control-center {
-    background: rgba(26, 27, 38, 0.98);
-    border-left: 2px solid @accent;
+    background: rgba(26, 27, 38, 0.95);
+    border-left: 2px solid @blue;
     color: @text;
     padding: 20px;
 }
 
 .widget-title {
-    color: @accent;
-    font-size: 24px;
+    color: @blue;
+    font-size: 22px;
     font-weight: bold;
-}
-
-.widget-title > button {
-    background: rgba(65, 72, 104, 0.5);
-    color: @text;
-    border-radius: 8px;
-    padding: 8px 16px;
-    border: 1px solid rgba(187, 154, 247, 0.2);
-}
-
-.widget-title > button:hover {
-    background: @accent;
-    color: @base00;
-}
-
-.widget-dnd {
-    background: rgba(65, 72, 104, 0.3);
-    border-radius: 12px;
-    padding: 10px;
-    border: 1px solid rgba(187, 154, 247, 0.1);
-}
-
-/* Close button */
-.close-button {
-    background: rgba(247, 118, 142, 0.1);
-    color: @red;
-    border-radius: 50%;
-}
-
-.close-button:hover {
-    background: @red;
-    color: @base00;
 }
