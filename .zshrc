@@ -203,4 +203,4 @@ eval "$(zoxide init zsh)"
 # Modern Terminal Aliases
 alias ls='eza --icons --group-directories-first'
 alias ll='eza -la --icons --group-directories-first'
-alias cat='bat --theme="tokyonight_night"'
+alias cat='bat --theme="base16"'
