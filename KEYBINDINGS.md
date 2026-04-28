@@ -77,6 +77,8 @@ The prefix key for Tmux commands is Ctrl + Space.
 ### Sessions and Windows
 * Ctrl + Space, then r : Reload Tmux Configuration
 * Ctrl + Space, then c : Create a new window
+* Ctrl + Space, then o : Open Session Manager (SessionX)
+* Ctrl + Space, then p : Toggle Floating Terminal (Floax)
 * Shift + Left or Right Arrow : Switch to previous or next window (No prefix required)
 * Alt + Shift + H or L : Switch to previous or next window (No prefix required)
 
