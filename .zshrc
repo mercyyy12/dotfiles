@@ -201,6 +201,4 @@ alias nvrun='/usr/local/bin/nvrun'
 eval "$(zoxide init zsh)"
 
 # Modern Terminal Aliases
-alias ls='eza --icons --group-directories-first'
-alias ll='eza -la --icons --group-directories-first'
 alias cat='bat --theme="base16"'
