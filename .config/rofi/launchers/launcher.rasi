@@ -42,13 +42,19 @@ inputbar {
     text-color:                  var(foreground-color);
     border:                      0px 0px 2px 0px;
     border-color:                var(selected-normal-background);
-    children:                    [ "entry" ];
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    margin:                      0px 10px 0px 0px;
 }
 
 entry {
     background-color:            transparent;
     text-color:                  inherit;
-    placeholder:                 "Search...";
     placeholder-color:           inherit;
     vertical-align:              0.5;
 }

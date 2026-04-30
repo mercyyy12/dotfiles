@@ -83,9 +83,10 @@ The prefix key for Tmux commands is Ctrl + Space.
 * Alt + Shift + H or L : Switch to previous or next window (No prefix required)
 
 ### Panes
-* Ctrl + Space, then " : Split window vertically
-* Ctrl + Space, then % : Split window horizontally
+* Ctrl + Space, then " or - : Split window vertically
+* Ctrl + Space, then % or | : Split window horizontally
 * Ctrl + Space, then h, j, k, l : Select pane based on direction
+* Ctrl + Space, then H, J, K, L : Resize pane (Repeatable)
 
 ### Copy Mode
 * Ctrl + Space, then [ : Enter Copy Mode

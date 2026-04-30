@@ -198,7 +198,6 @@ alias te='trash-empty'
 
 # Hybrid Graphics Alias
 alias nvrun='/usr/local/bin/nvrun'
-eval "$(zoxide init zsh)"
-
 # Modern Terminal Aliases
 alias cat='bat --theme="base16"'
+alias icat="kitty +kitten icat"
