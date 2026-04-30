@@ -201,3 +201,7 @@ alias nvrun='/usr/local/bin/nvrun'
 # Modern Terminal Aliases
 alias cat='bat --theme="base16"'
 alias icat="kitty +kitten icat"
+
+# Local Path
+export PATH="$HOME/.local/bin:$PATH"
+
