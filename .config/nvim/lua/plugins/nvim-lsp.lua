@@ -83,6 +83,7 @@ return {
       }
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       local servers = {
+        gopls = {},
         rust_analyzer = {},
         intelephense = {},
         lua_ls = {
