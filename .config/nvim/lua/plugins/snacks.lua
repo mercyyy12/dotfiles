@@ -24,6 +24,7 @@ return {
   },
   keys = {
     { "<leader>lg", function() Snacks.lazygit() end, desc = "LazyGit" },
+    { "<leader>r", function() vim.cmd("write"); Snacks.terminal("go run " .. vim.fn.expand("%")) end, desc = "Run Go" },
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss Notifications" },
     { "<c-/>",      function() Snacks.terminal() end, desc = "Terminal", mode = {"n", "t"} },
     { "\\", function() Snacks.explorer() end, desc = "Explorer" },

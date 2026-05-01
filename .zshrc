@@ -147,7 +147,7 @@ function y() {
 }
 
 pathprepend "$HOME/bin" "$HOME/sbin" "$HOME/.local/bin" "$HOME/local/bin" "$HOME/.bin"
-pathappend "$HOME/.cargo/bin"
+pathappend "$HOME/.cargo/bin" "$HOME/go/bin"
 
 function runfree() {
 	"$@" > /dev/null 2>&1 & disown
@@ -188,7 +188,7 @@ function mkdirg() {
 # Integrations (Deferred for Speed)
 #######################################################
 zinit ice wait'0' lucid atinit'source <(fzf --zsh)'; zinit light Aloxaf/fzf-tab
-zinit ice wait'0' lucid atinit'eval "$(zoxide init --cmd cd zsh)"'; zinit light zdharma-continuum/null
+zinit ice wait'0' lucid atinit'eval "$(zoxide init zsh)"'; zinit light zdharma-continuum/null
 
 # Trash Integration
 alias rm='trash-put'
