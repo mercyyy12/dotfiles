@@ -17,7 +17,6 @@ return { -- Autocompletion
         opts = {},
       },
       'folke/lazydev.nvim',
-      'Exafunction/codeium.nvim',
     },
     opts = {
       keymap = {

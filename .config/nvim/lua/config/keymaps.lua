@@ -23,3 +23,6 @@ for _, mode in ipairs(enabledModes) do
   vim.keymap.set(mode, '<A-k>', '<Up>', { noremap = true, silent = true })
   vim.keymap.set(mode, '<A-l>', '<Right>', { noremap = true, silent = true })
 end
+
+-- Shortcut to run the current Go file
+vim.keymap.set('n', '<leader>r', '<cmd>vsplit | term go run %<CR>', { desc = '[R]un current Go file' })
