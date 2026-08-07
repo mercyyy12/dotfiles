@@ -1,5 +1,9 @@
-@define-color base00 #1a1b26;
-@define-color base01 #16161e;
+/* =============================================================================
+ * Tokyo Night Cyberpunk Theme for SwayNotificationCenter (swaync)
+ * ============================================================================= */
+
+@define-color base00 #16161e;
+@define-color base01 #1a1b26;
 @define-color base02 #24283b;
 @define-color base03 #414868;
 @define-color base04 #565f89;
@@ -13,54 +17,269 @@
 @define-color magenta #bb9af7;
 @define-color sky    #7dcfff;
 
+/* Reset and Global Typography */
 * {
-    font-family: "JetBrainsMono Nerd Font", "Fira Sans Semibold";
-    font-size: 13px;
-    transition: 200ms;
+    font-family: "JetBrainsMono Nerd Font", "Hack Nerd Font", "Fira Sans Semibold", sans-serif;
+    transition: 200ms ease-in-out;
 }
 
-/* Notifications */
 .notification-row {
     outline: none;
-    margin: 8px 10px;
-    padding: 0;
+    margin: 8px 0px;
+    padding: 0px;
 }
 
 .notification {
-    background: rgba(26, 27, 38, 0.9);
-    border: 1px solid rgba(122, 162, 247, 0.4);
-    border-radius: 10px;
-    padding: 12px;
-    box-shadow: 0 0 15px rgba(122, 162, 247, 0.2);
+    background: transparent;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
 }
 
-.notification:hover {
-    background: rgba(36, 40, 59, 0.95);
-    border-color: @blue;
-    box-shadow: 0 0 20px rgba(122, 162, 247, 0.4);
+.notification-content {
+    background: linear-gradient(135deg, rgba(26, 27, 38, 0.94), rgba(36, 40, 59, 0.94));
+    border: 1px solid rgba(122, 162, 247, 0.45);
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin: 0px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
-.notification-title {
-    font-weight: bold;
+.notification-default-action {
+    background: transparent;
+    border: none;
+    border-radius: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.notification-default-action:hover {
+    background: rgba(122, 162, 247, 0.08);
+}
+
+.notification-content:hover {
+    border-color: #7dcfff;
+    box-shadow: 0 0 20px rgba(125, 207, 255, 0.35);
+}
+
+/* Critical & Urgent Notifications */
+.critical .notification-content {
+    background: linear-gradient(135deg, rgba(35, 22, 30, 0.96), rgba(45, 25, 38, 0.96));
+    border: 1px solid #f7768e;
+    box-shadow: 0 0 24px rgba(247, 118, 142, 0.38);
+}
+
+.critical .summary {
+    color: #f7768e;
+}
+
+/* Notification Typography */
+.summary {
     font-size: 15px;
-    color: @blue;
+    font-weight: 800;
+    color: #7dcfff;
 }
 
-.notification-body {
-    color: @text;
-    margin-top: 4px;
+.time {
+    font-size: 11px;
+    color: #787c99;
+    font-weight: 600;
+    margin-right: 18px;
 }
 
-/* Control Center */
-.control-center {
-    background: rgba(26, 27, 38, 0.95);
-    border-left: 2px solid @blue;
-    color: @text;
-    padding: 20px;
+.body {
+    font-size: 13px;
+    color: #c0caf5;
+    margin-top: 6px;
+    line-height: 1.4;
 }
 
-.widget-title {
-    color: @blue;
-    font-size: 22px;
+.body-image {
+    margin-top: 6px;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close-button {
+    background: rgba(247, 118, 142, 0.15);
+    color: #f7768e;
+    border: 1px solid rgba(247, 118, 142, 0.5);
+    border-radius: 12px;
+    padding: 4px 10px;
+    margin: 4px;
     font-weight: bold;
+}
+
+.close-button:hover {
+    background: #f7768e;
+    color: #16161e;
+    box-shadow: 0 0 12px rgba(247, 118, 142, 0.8);
+}
+
+/* =============================================================================
+ * Control Center Panel
+ * ============================================================================= */
+
+.control-center {
+    background: rgba(22, 22, 30, 0.93);
+    border: 2px solid #7aa2f7;
+    border-radius: 20px;
+    color: #c0caf5;
+    padding: 20px;
+    margin: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), 0 0 25px rgba(122, 162, 247, 0.25);
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-list-placeholder {
+    color: #565f89;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+/* Widget Title (Header & Clear All Button) */
+.widget-title {
+    color: #7dcfff;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.widget-title > button {
+    background: rgba(36, 40, 59, 0.9);
+    color: #7aa2f7;
+    border: 1px solid rgba(122, 162, 247, 0.5);
+    border-radius: 12px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.widget-title > button:hover {
+    background: #7aa2f7;
+    color: #16161e;
+    box-shadow: 0 0 16px rgba(122, 162, 247, 0.6);
+    border-color: #7aa2f7;
+}
+
+/* Do Not Disturb Toggle */
+.widget-dnd {
+    background: rgba(36, 40, 59, 0.6);
+    border: 1px solid rgba(122, 162, 247, 0.25);
+    border-radius: 14px;
+    padding: 10px 16px;
+    margin: 12px 0px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #c0caf5;
+}
+
+.widget-dnd > switch {
+    background: rgba(26, 27, 38, 0.9);
+    border: 1px solid #565f89;
+    border-radius: 12px;
+}
+
+.widget-dnd > switch:checked {
+    background: #e0af68;
+    border-color: #e0af68;
+    box-shadow: 0 0 12px rgba(224, 175, 104, 0.6);
+}
+
+.widget-dnd > switch slider {
+    background: #c0caf5;
+    border-radius: 10px;
+}
+
+.widget-dnd > switch:checked slider {
+    background: #16161e;
+}
+
+/* Quick Action Buttons Grid */
+.widget-buttons-grid {
+    margin: 14px 0px;
+    padding: 4px;
+    background: rgba(26, 27, 38, 0.5);
+    border-radius: 16px;
+    border: 1px solid rgba(122, 162, 247, 0.15);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: rgba(36, 40, 59, 0.9);
+    color: #bb9af7;
+    border: 1px solid rgba(187, 154, 247, 0.35);
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin: 4px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: #bb9af7;
+    color: #16161e;
+    border-color: #bb9af7;
+    box-shadow: 0 0 18px rgba(187, 154, 247, 0.65);
+}
+
+/* MPRIS Media Player */
+.widget-mpris {
+    background: linear-gradient(135deg, rgba(36, 40, 59, 0.75), rgba(26, 27, 38, 0.85));
+    border: 1px solid rgba(122, 162, 247, 0.35);
+    border-radius: 16px;
+    padding: 14px;
+    margin: 12px 0px;
+    color: #c0caf5;
+}
+
+.widget-mpris-player {
+    padding: 6px;
+    margin: 4px 0px;
+}
+
+.widget-mpris-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #7dcfff;
+}
+
+.widget-mpris-subtitle {
+    font-size: 12px;
+    color: #a9b1d6;
+}
+
+.widget-mpris > box > button {
+    background: rgba(26, 27, 38, 0.8);
+    color: #7aa2f7;
+    border: 1px solid rgba(122, 162, 247, 0.3);
+    border-radius: 12px;
+    padding: 6px 10px;
+    margin: 2px 4px;
+}
+
+.widget-mpris > box > button:hover {
+    background: #7aa2f7;
+    color: #16161e;
+    box-shadow: 0 0 12px rgba(122, 162, 247, 0.5);
+}
+
+/* Scrollbars */
+scrollbar {
+    background: transparent;
+    width: 6px;
+}
+
+scrollbar slider {
+    background: rgba(122, 162, 247, 0.4);
+    border-radius: 4px;
+}
+
+scrollbar slider:hover {
+    background: #7aa2f7;
 }

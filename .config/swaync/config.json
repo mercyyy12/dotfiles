@@ -1,46 +1,75 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ErikReider/SwayNotificationCenter/main/config.schema.json",
+  "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
   "positionY": "top",
   "layer": "overlay",
-  "control-center-margin-top": 5,
-  "control-center-margin-bottom": 5,
-  "control-center-margin-right": 5,
-  "control-center-margin-left": 5,
+  "control-center-margin-top": 12,
+  "control-center-margin-bottom": 12,
+  "control-center-margin-right": 12,
+  "control-center-margin-left": 12,
   "notification-icon-size": 48,
   "notification-body-image-height": 160,
   "notification-body-image-width": 240,
-  "timeout": 5,
+  "timeout": 6,
   "timeout-low": 3,
   "timeout-critical": 0,
-  "fit-to-screen": true,
-  "control-center-width": 400,
-  "control-center-height": 800,
-  "notification-window-width": 450,
+  "fit-to-screen": false,
+  "control-center-width": 410,
+  "control-center-height": 820,
+  "notification-window-width": 400,
   "keyboard-shortcuts": true,
   "image-visibility": "always",
-  "transition-time": 300,
+  "transition-time": 250,
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
   "widgets": [
     "title",
-    "mpris",
     "dnd",
+    "buttons-grid",
+    "mpris",
     "notifications"
   ],
   "widget-config": {
     "title": {
-      "text": "Notifications",
+      "text": "CYBER COMMAND",
       "clear-all-button": true,
-      "button-text": "Clear All"
+      "button-text": "󰎟  Clear All"
     },
     "dnd": {
       "text": "Do Not Disturb"
     },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "   Wi-Fi",
+          "command": "~/.config/rofi/scripts/wifi-menu.sh"
+        },
+        {
+          "label": "󰂯   Bluetooth",
+          "command": "blueman-manager"
+        },
+        {
+          "label": "󰕾   Audio",
+          "command": "pavucontrol"
+        },
+        {
+          "label": "󰹑   Capture",
+          "command": "grim -g \"$(slurp)\" - | wl-copy"
+        },
+        {
+          "label": "   Lock",
+          "command": "~/.config/sway/scripts/lockman.sh"
+        },
+        {
+          "label": "⏻   Power",
+          "command": "~/.config/rofi/powermenu/powermenu.sh"
+        }
+      ]
+    },
     "mpris": {
-      "image-size": 96,
-      "image-radius": 12
+      "image-size": 84,
+      "image-radius": 14
     }
   }
 }

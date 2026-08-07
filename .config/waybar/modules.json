@@ -110,7 +110,17 @@
     },
     "backlight": {
         "format": "{icon} {percent: >3}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
         "on-scroll-down": "brightnessctl set 5%-",
         "on-scroll-up": "brightnessctl set +5%"
     },
@@ -123,7 +133,13 @@
         "format-charging": "  {capacity}%",
         "format-plugged": "  {capacity}%",
         "format-alt": "{icon}  {time}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "network": {
         "format": "󰤭  Disabled",
@@ -159,7 +175,11 @@
             "phone": "",
             "portable": "",
             "car": "󰄋",
-            "default": ["󰕿", "󰖀", "󰕾"]
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
         },
         "on-click": "pavucontrol",
         "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
