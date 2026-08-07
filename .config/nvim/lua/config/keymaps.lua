@@ -16,13 +16,12 @@ for _, mode in ipairs(modes) do
   end
 end
 
-local enabledModes = { 'i', 'c', 'o', 't', 's', 'x' }
-for _, mode in ipairs(enabledModes) do
-  vim.keymap.set(mode, '<A-h>', '<Left>', { noremap = true, silent = true })
-  vim.keymap.set(mode, '<A-j>', '<Down>', { noremap = true, silent = true })
-  vim.keymap.set(mode, '<A-k>', '<Up>', { noremap = true, silent = true })
-  vim.keymap.set(mode, '<A-l>', '<Right>', { noremap = true, silent = true })
-end
+
 
 -- Shortcut to run the current Go file
 vim.keymap.set('n', '<leader>r', '<cmd>vsplit | term go run %<CR>', { desc = '[R]un current Go file' })
+
+-- Window splits (looks like what it does!)
+vim.keymap.set('n', '<leader>|', '<cmd>vsplit<CR>', { desc = 'Split window vertically' })
+vim.keymap.set('n', '<leader>-', '<cmd>split<CR>',  { desc = 'Split window horizontally' })
+vim.keymap.set('n', '<leader>x', '<cmd>close<CR>',  { desc = 'Close current pane' })

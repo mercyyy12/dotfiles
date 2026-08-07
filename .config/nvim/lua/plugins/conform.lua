@@ -28,6 +28,9 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			go = { "goimports", "gofmt" },
+			html = { "prettier" },
+			css = { "prettier" },
+			python = { "isort", "black" },
 		},
 	},
 }

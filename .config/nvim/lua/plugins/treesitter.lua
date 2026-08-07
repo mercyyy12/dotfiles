@@ -9,7 +9,7 @@ return {
     },
     opts = {
         ensure_installed = {
-            "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "markdown_inline", "query", "vim", "vimdoc", "rust", 'regex', "php", "blade"
+            "bash", "c", "diff", "html", "css", "lua", "luadoc", "markdown", "markdown_inline", "query", "vim", "vimdoc", "rust", 'regex', "php", "blade", "python"
         },
         auto_install = true,
         highlight = {

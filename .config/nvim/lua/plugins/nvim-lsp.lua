@@ -84,8 +84,12 @@ return {
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       local servers = {
         gopls = {},
+        pyright = {},
         rust_analyzer = {},
         intelephense = {},
+        omnisharp = {},
+        html = {},
+        cssls = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -100,7 +104,7 @@ return {
         vim.lsp.config(name, config)
       end
       local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, { 'stylua', 'goimports', 'gofumpt', 'golangci-lint', 'delve', 'gomodifytags', 'impl' })
+      vim.list_extend(ensure_installed, { 'stylua', 'goimports', 'gofumpt', 'golangci-lint', 'delve', 'gomodifytags', 'impl', 'prettier', 'black', 'isort' })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
       require('mason-lspconfig').setup {
         ensure_installed = {},
