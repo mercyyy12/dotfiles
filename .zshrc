@@ -18,10 +18,10 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-zinit ice wait'0' lucid atload'source ~/.config/zsh/zsh-syntax-highlighting-tokyonight.zsh'; zinit light zsh-users/zsh-syntax-highlighting
+zinit ice atload'source ~/.config/zsh/zsh-syntax-highlighting-tokyonight.zsh'; zinit light zsh-users/zsh-syntax-highlighting
 zinit ice wait'0' lucid; zinit light zsh-users/zsh-completions
-zinit ice wait'0' lucid; zinit light zsh-users/zsh-autosuggestions
-zinit ice wait'0' lucid; zinit light jeffreytse/zsh-vi-mode
+zinit light zsh-users/zsh-autosuggestions
+zinit light jeffreytse/zsh-vi-mode
 
 zinit ice wait'0' lucid; zinit snippet OMZP::git
 zinit ice wait'0' lucid; zinit snippet OMZP::sudo
@@ -57,7 +57,7 @@ export VISUAL=nvim
 export SUDO_EDITOR=nvim
 export FCEDIT=nvim
 export TERMINAL=kitty
-export BROWSER=com.brave.Browser
+export BROWSER=zen
 
 if [[ -x "$(command -v bat)" ]]; then
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -191,7 +191,7 @@ zinit ice wait'0' lucid atinit'source <(fzf --zsh)'; zinit light Aloxaf/fzf-tab
 zinit ice wait'0' lucid atinit'eval "$(zoxide init zsh)"'; zinit light zdharma-continuum/null
 
 # Trash Integration
-alias rm='trash-put'
+# alias rm='trash-put'
 alias tl='trash-list'
 alias tr='trash-restore'
 alias te='trash-empty'
@@ -205,3 +205,4 @@ alias icat="kitty +kitten icat"
 # Local Path
 export PATH="$HOME/.local/bin:$PATH"
 
+export PATH=$PATH:/usr/local/go/bin
